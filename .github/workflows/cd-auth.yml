@@ -28,7 +28,7 @@ on:
 permissions:
   contents: write
   id-token: write
-  packages: write
+  packages: read
 env:
   TERM: xterm
 jobs:
