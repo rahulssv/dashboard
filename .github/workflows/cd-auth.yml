@@ -15,16 +15,16 @@
 name: CD / Auth
 on:
   workflow_dispatch:
-  push:
-    branches: [master]
-    paths:
-      - .github/workflows/cd-auth.yml
-      - modules/auth
-      - modules/common
-      - hack/docker
-      - hack/gateway
-    tags:
-      - "auth/v*.*.*"
+  # push:
+  #   branches: [master]
+  #   paths:
+  #     - .github/workflows/cd-auth.yml
+  #     - modules/auth
+  #     - modules/common
+  #     - hack/docker
+  #     - hack/gateway
+  #   tags:
+  #     - "auth/v*.*.*"
 permissions:
   contents: write
   id-token: write
@@ -69,7 +69,7 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          platforms: linux/amd64,linux/arm64,linux/arm,linux/ppc64le,linux/s390x
+          platforms: inux/ppc64le
           cache-from: type=gha
           cache-to: type=gha,mode=max
           build-args: |
