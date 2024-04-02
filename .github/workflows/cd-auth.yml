@@ -29,16 +29,16 @@ on:
 #   contents: write
 #   id-token: write
 #   packages: read
-env:
-  TERM: xterm
+# env:
+#   TERM: xterm
 jobs:
   release:
     name: Release
     runs-on: ubuntu-20.04-ppc64le
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+        # with:
+        #   fetch-depth: 0
       # - id: meta
       #   uses: docker/metadata-action@v5
       #   with:
