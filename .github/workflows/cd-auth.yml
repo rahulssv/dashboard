@@ -35,8 +35,8 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-20.04-ppc64le
-    steps:
-      - uses: actions/checkout@v4
+    # steps:
+    #   - uses: actions/checkout@v4
         # with:
         #   fetch-depth: 0
       # - id: meta
