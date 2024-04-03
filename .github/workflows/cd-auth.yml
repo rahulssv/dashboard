@@ -34,7 +34,7 @@ env:
 jobs:
   release:
     name: Release
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04-ppc64le
     steps:
       - uses: actions/checkout@v3
         with:
@@ -66,10 +66,10 @@ jobs:
         with:
           context: modules
           file: modules/auth/Dockerfile
-          push: true
+          push: false
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          platforms: linux/amd64
+          platforms: linux/ppc64le
           cache-from: type=gha
           cache-to: type=gha,mode=max
           build-args: |
