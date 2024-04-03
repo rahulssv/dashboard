@@ -15,16 +15,16 @@
 name: CD / Auth
 on:
   workflow_dispatch:
-  # push:
-  #   branches: [master]
-  #   paths:
-  #     - .github/workflows/cd-auth.yml
-  #     - modules/auth
-  #     - modules/common
-  #     - hack/docker
-  #     - hack/gateway
-  #   tags:
-  #     - "auth/v*.*.*"
+  push:
+    branches: [master]
+    paths:
+      - .github/workflows/cd-auth.yml
+      - modules/auth
+      - modules/common
+      - hack/docker
+      - hack/gateway
+    tags:
+      - "auth/v*.*.*"
 permissions:
   contents: write
   id-token: write
