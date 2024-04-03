@@ -44,7 +44,7 @@ jobs:
         with:
           images: |
             ghcr.io/kubernetes/dashboard-auth
-            docker.io/rahul1181/dashboard-auth
+            docker.io/kubernetesui/dashboard-auth
           tags: |
             type=raw,value=latest
             type=match,pattern=\d+\.\d+\.\d+
