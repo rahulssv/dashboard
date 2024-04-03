@@ -43,7 +43,7 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: |
-            ghcr.io/rahulssv/dashboard-auth
+            ghcr.io/kubernetes/dashboard-auth
             docker.io/rahul1181/dashboard-auth
           tags: |
             type=raw,value=latest
